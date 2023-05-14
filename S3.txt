@@ -1,0 +1,16 @@
+S3 buckets->create buckets->name(should be unique for e.g prn no)-> aws redion->object ownership(ACL disabled)->uncheck the 
+block public access settings for this buckets->check the acknowledgment box->create.
+
+>> create the .html(index.html) file on your m/c in any floder.
+>>go into the bucket-> click on upload & upoad the file or floder which you want.
+
+>> Buckets properties->static website hosting->edit->make Enable static website hosting->hosting type(Hosting a static website)
+->In Index document(filename - index.html)->save changes.
+
+>>buckets permissions->edit policy->add new statement->
+				"Sid":"This website for demo purpose",
+				"Effect":"Allow",
+				"Principal":"*",
+				"Action":"s3:*",    #this added from add action(choose service S3)
+				"Resource":"copy the arn & at last add /*"
+->save changes ->then copy the object url & paste into new tab.

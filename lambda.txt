@@ -1,0 +1,27 @@
+Lambda :- 
+→Search in AWS IMA→ Go to Roles (left side) → Create role - Aws service-- Lambda--Next →→ 
+Search in Policies execution & enter →→ Select AWS Lambda- Basic ExecutionRole →→ Next → 
+Then give Role name (Alpha-numeric name) →If  You want change description than charge or don't change → 
+Create roles.
+
+→→ Again create one more role for sns → Only search for policies sns & enter & Select Amazon SNS FULLAccess → 
+Next --give name & create role.
+
+ →→ Create S3 Bucket, but don't upload any file
+-- Now Search for lambda → Create function-- Select
+Author from scratch --give function name → In Runtime Select which script you want to select (Python 3·7) → 
+Dropdown arrows of Change default execution role & Select Use an existing role ---
+In Existing role Select the first role ie (cloudwatch_role)--- Create function--
+if  you want to write script then you can write there --Go into Monitor for details then configuration.
+--- Now Search for SNS in Search box of AWS → Go to topics (left side) → create topic → Select Standard →→ 
+Give name → If you want displayname then add or let it be (its optional)--- Create → Go into subscription & 
+create subscription → Dropdown on Protocol → Select email----- on Endpoint provide your email Id → 
+Create Subscription → mail has been sent to your mail →In mail click on Confirm & go to simple Notification & Refresh →
+The status will be confirmed.
+
+→Go to the lambda function which you create →Click on Add trigger → Dropdown & type s3 & Select S3 →→ 
+Select bucket which you created / want →→ In Suffix (If you want to trigger a files like.pdf, .html then type there) 
+→ Click / check box acknowledgement → Create → Then to Triggers → click on destination → 
+Select Asynchronous invocation in Source → In Condition select on Success →→→ In Destination type (SNS topic) → 
+In Destination dropdown & Select which you have created(Mytopic) -Save 
+Now go to s3 bucket & click on your bucket & upload Files -mail will sent to you of how many logs you created.

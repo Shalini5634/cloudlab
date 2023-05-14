@@ -1,0 +1,20 @@
+Windows:-
+
+>> Make Instances with windows servers
+>>then connect the instances thorugh RDP client->download remote desktop file->double click on that file->connect->
+upload private key(.pem file)->decrypt password->copy the password & paste on admin display->ok->certificate msg->yes->server
+desktop got it.(windows server connect).
+
+>>for Windows->in searchbox search server manager -> go to local server->install IIS service(Tools)
+
+>>to instal IIS->click on manage-> add roles & features->click on next->Select webserver IIS->click on next->install
+
+>>go to c drive->inetpub->wwwroot->iisstart(default pg)-> make new folder (name-web1)->in that folder make new txt file write content in that file & then convert 
+it into .html file(to convert into .html file select that file go into view & enable file extension then change extension to .html).
+
+>>to create sites-> go to iis manager->add websites ->sitename(site1)-> physical path(browse to c drive/inetput/wwwroot/newfolder)->fo to that site & select binding(Right hand side)
+->ip add select->port(8000)
+>>site1->directory browsing->right side->enable. then again site1 & right side->restart.
+>>site1->default document->double click->right click->site1.html( moveup to first position.)
+
+>>then give ip:portno in webpage.(to know the ip >>localserver->ethernet2->details->IPv4 Address is your m/c ip)

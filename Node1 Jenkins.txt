@@ -1,0 +1,10 @@
+       apt-get install git -y
+       git clone https://github.com/Shalini5634/repo.git
+       ls
+       cd repo/
+       apt install vim -y
+       vim index.html
+       git add -A
+       git config --global user.email "sh2308p@gmail.com"
+       git commit -m "1.0"
+       git push -u origin master

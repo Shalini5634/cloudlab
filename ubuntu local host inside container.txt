@@ -1,0 +1,18 @@
+    apt update -y
+    apt upgade -y
+    apt install apache2
+    apt install systemctl -y
+    systemctl start apache2
+    systemctl status apache2
+    systemctl enable apache2
+    apt install curl
+    curl http://localhost
+    cd /var/www/html/
+    ls
+    rm -rf index.html
+    vim index.html
+    apt install vim -y
+    vim index.html
+    curl http://localhost
+
+
